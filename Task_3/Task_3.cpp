@@ -12,8 +12,8 @@ int main()
 
 	int indexB = 0;
 
-	const int sizeA = 10;
-	const int sizeB = 10;
+	const int sizeA = 30;
+	const int sizeB = 30;
 
 	int a[sizeA];
 	int b[sizeB];
@@ -31,35 +31,26 @@ int main()
 		if (a[i] > 0)
 		{
 			b[indexB] = a[i];
-			a[i] = NULL;
 			indexB++;
 		}
 	}
 
 	for (int i = 0; i < sizeA; i++)
 	{
-		if (a[i] != NULL)
-		{
 			if (a[i] == 0)
 			{
 				b[indexB] = a[i];
-				a[i] = NULL;
 				indexB++;
 			}
-		}
 	}
 
 	for (int i = 0; i < sizeA; i++)
 	{
-		if (a[i] != NULL)
-		{
 			if (a[i] < 0)
 			{
 				b[indexB] = a[i];
-				a[i] = NULL;
 				indexB++;
 			}
-		}
 	}
 
 	std::cout << "\nArray B:\t";
